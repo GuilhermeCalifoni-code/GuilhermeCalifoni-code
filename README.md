@@ -23,6 +23,7 @@ I build AI-powered applications and software that solve practical business probl
 
 | Project | Engineering focus | Status |
 | --- | --- | --- |
+| [Pedagogical AI Advisor](https://github.com/GuilhermeCalifoni-code/advisor-ai-pedagogico) | Gemini, LangChain, structured generation and DOCX export | Repository implementation |
 | [Motiva Field](https://github.com/GuilhermeCalifoni-code/motiva-field) | Computer vision, field operations, Flutter, automated Android builds | Academic team project · final delivery |
 | [RetroBook](https://github.com/GuilhermeCalifoni-code/retrobook) | Full-stack architecture, PostgreSQL, Prisma, recommendations, smoke tests | Individual · completed |
 | [AI Chef — Receitas de Vó](https://github.com/GuilhermeCalifoni-code/receitas-de-v-) | Gemini integration, Python, FastAPI, React | Individual · in production |
