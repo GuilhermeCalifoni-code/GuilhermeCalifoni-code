@@ -5,26 +5,26 @@
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <title>Guilherme Califoni | Engenharia de IA aplicada</title>
 <meta name="description" content="Guilherme Califoni: engenharia de IA aplicada, automação e software. Projetos com LLMs, visão computacional, dados e produtos em produção.">
-<meta name="theme-color" content="#0e1726">
+<meta name="theme-color" content="#000000">
 <meta property="og:type" content="website">
 <meta property="og:title" content="Guilherme Califoni | Engenharia de IA aplicada">
 <meta property="og:description" content="Do problema de negócio ao produto em uso: IA, automação e software.">
 <meta property="og:url" content="https://guilherme-califoni-portfolio.vercel.app/">
 <meta name="twitter:card" content="summary">
-<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='6' fill='%230e1726'/%3E%3Ccircle cx='9' cy='16' r='3' fill='%23f2b544'/%3E%3Ccircle cx='23' cy='16' r='3' fill='%23e6edf5'/%3E%3Cpath d='M12 16h8' stroke='%23f2b544' stroke-width='2'/%3E%3C/svg%3E">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='6' fill='%23000000'/%3E%3Ccircle cx='9' cy='16' r='3' fill='%23f2b544'/%3E%3Ccircle cx='23' cy='16' r='3' fill='%23ededed'/%3E%3Cpath d='M12 16h8' stroke='%23f2b544' stroke-width='2'/%3E%3C/svg%3E">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans+Condensed:wght@500;600;700&family=IBM+Plex+Sans:wght@400;500;600&display=swap" rel="stylesheet">
 <style>
 :root{
   color-scheme:dark;
-  --ink:#0e1726;      /* fundo: azul de prancheta */
-  --deck:#131f33;     /* superfícies */
-  --rule:#243450;     /* linhas e bordas */
-  --paper:#e6edf5;    /* texto */
-  --dim:#93a6bf;      /* texto secundário */
+  --ink:#000000;      /* fundo: preto */
+  --deck:#0c0c0d;     /* superfícies */
+  --rule:#26262a;     /* linhas e bordas */
+  --paper:#ededed;    /* texto */
+  --dim:#9b9ba1;      /* texto secundário */
   --signal:#f2b544;   /* sinal: o que está vivo / ativo */
-  --wire:#8cc8ff;     /* links e dados */
+  --wire:#d6d6d6;     /* links e dados */
   --display:"IBM Plex Sans Condensed","Arial Narrow",system-ui,sans-serif;
   --sans:"IBM Plex Sans",system-ui,-apple-system,"Segoe UI",sans-serif;
   --mono:"IBM Plex Mono",ui-monospace,SFMono-Regular,Consolas,monospace;
@@ -33,7 +33,7 @@
 *{box-sizing:border-box}
 html{scroll-behavior:smooth;scroll-padding-top:84px;scroll-padding-bottom:60px}
 body{margin:0;background:var(--ink);color:var(--paper);font:17px/1.6 var(--sans);padding-bottom:calc(var(--bar) + env(safe-area-inset-bottom));
-  background-image:linear-gradient(#93a6bf0b 1px,transparent 1px),linear-gradient(90deg,#93a6bf0b 1px,transparent 1px);background-size:48px 48px;background-attachment:fixed}
+  background-image:linear-gradient(#ffffff08 1px,transparent 1px),linear-gradient(90deg,#ffffff08 1px,transparent 1px);background-size:48px 48px;background-attachment:fixed}
 a{color:inherit;text-decoration:none}
 button,input{font:inherit;color:inherit}
 button{cursor:pointer}
@@ -44,7 +44,7 @@ button{cursor:pointer}
 .skiplink:focus{top:12px}
 
 /* header */
-header{position:sticky;top:0;z-index:20;background:#0e1726d9;backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px);border-bottom:1px solid var(--rule)}
+header{position:sticky;top:0;z-index:20;background:#000000d9;backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px);border-bottom:1px solid var(--rule)}
 nav{display:flex;align-items:center;justify-content:space-between;gap:24px;min-height:68px}
 .brand{display:flex;align-items:center;gap:10px;font:600 18px var(--display);letter-spacing:.01em}
 .brand svg{flex:none}
@@ -68,7 +68,7 @@ kbd{font:12px var(--mono);border:1px solid var(--rule);border-bottom-width:2px;b
 .btn.primary:hover{background:#f7c766}
 
 /* pipeline: o elemento memorável */
-.pipeline{margin:72px 0 0;padding:28px;border:1px solid var(--rule);border-radius:10px;background:linear-gradient(180deg,#131f33f2,#0e1726f2)}
+.pipeline{margin:72px 0 0;padding:28px;border:1px solid var(--rule);border-radius:10px;background:linear-gradient(180deg,#0c0c0df2,#000000f2)}
 .pipeline-head{display:flex;justify-content:space-between;align-items:baseline;gap:16px;flex-wrap:wrap;margin-bottom:22px}
 .pipeline-head h2{font:600 22px var(--display);margin:0;letter-spacing:.005em}
 .pipeline-head p{margin:0;color:var(--dim);font-size:15px}
@@ -83,7 +83,7 @@ kbd{font:12px var(--mono);border:1px solid var(--rule);border-bottom-width:2px;b
 .node .n{font:500 13px var(--mono);color:var(--dim);transition:color .3s}
 .node .t{font:600 21px/1.15 var(--display)}
 .node .s{font-size:14px;color:var(--dim);line-height:1.4}
-.node .c{margin-top:auto;padding-top:10px;font:13px var(--mono);color:var(--wire)}
+.node .c{margin-top:auto;padding-top:10px;font:13px var(--mono);color:var(--dim)}
 .node.lit .n{color:var(--signal)}
 .node.lit{border-color:#f2b54466}
 .node[aria-pressed="true"]{border-color:var(--signal);background:#f2b54414}
@@ -94,7 +94,7 @@ kbd{font:12px var(--mono);border:1px solid var(--rule);border-bottom-width:2px;b
 .evidence li{display:flex;justify-content:space-between;gap:16px;padding:9px 0;border-bottom:1px solid var(--rule);font-size:15px}
 .evidence li:last-child{border-bottom:0}
 .evidence a,.evidence .what{font-weight:600}
-.evidence a{color:var(--wire)}
+.evidence a{color:var(--paper);text-decoration:underline;text-decoration-color:#f2b54480;text-underline-offset:4px}
 .evidence a:hover{text-decoration:underline}
 .evidence .why{color:var(--dim);text-align:right}
 
@@ -137,12 +137,12 @@ kbd{font:12px var(--mono);border:1px solid var(--rule);border-bottom-width:2px;b
 .spec dt,.spec dd{padding:11px 0;border-bottom:1px solid var(--rule);font-size:15px;margin:0}
 .spec dt{color:var(--dim);padding-right:20px}
 .spec dd{font:14px/1.5 var(--mono)}
-.repo{display:inline-flex;gap:8px;align-items:center;font-weight:600;color:var(--wire);font-size:15px}
+.repo{display:inline-flex;gap:8px;align-items:center;font-weight:600;color:var(--signal);font-size:15px}
 .repo:hover{text-decoration:underline}
 .rows{list-style:none;margin:0;padding:0;border-top:1px solid var(--rule)}
 .row{display:grid;grid-template-columns:minmax(0,1.1fr) minmax(0,2fr) minmax(0,1.1fr) 120px;grid-template-areas:"name desc stack repo" "status desc stack repo";gap:4px 24px;align-items:start;padding:22px 8px;border-bottom:1px solid var(--rule)}
 .row > div:first-child{grid-area:name}.row .st-cell{grid-area:status}.row p{grid-area:desc}.row .stack{grid-area:stack;padding-top:3px}.row .repo{grid-area:repo;padding-top:3px}
-.row:hover{background:#131f3399}
+.row:hover{background:#0c0c0d99}
 .row h3{font:600 22px/1.2 var(--display);margin:0 0 6px}
 .row p{margin:0;color:var(--dim);font-size:15px}
 .row .stack{font:13px/1.6 var(--mono);color:var(--paper)}
@@ -161,7 +161,7 @@ kbd{font:12px var(--mono);border:1px solid var(--rule);border-bottom-width:2px;b
 .console-grid{display:grid;grid-template-columns:minmax(0,.9fr) minmax(0,1.1fr);gap:48px;align-items:center}
 .console-grid h2{margin-bottom:16px}
 .console-grid > div > p{color:var(--dim);margin:0 0 12px;max-width:40ch}
-.terminal{border:1px solid var(--rule);background:#0a111d;border-radius:10px;overflow:hidden;font:14px/1.65 var(--mono);box-shadow:0 30px 80px #0006}
+.terminal{border:1px solid var(--rule);background:#050505;border-radius:10px;overflow:hidden;font:14px/1.65 var(--mono);box-shadow:0 30px 80px #0006}
 .terminal-head{display:flex;align-items:center;gap:8px;padding:12px 14px;border-bottom:1px solid var(--rule);color:var(--dim);font-size:13px}
 .dots{display:flex;gap:6px;margin-right:6px}
 .dots i{width:10px;height:10px;border-radius:50%;background:var(--rule)}
@@ -176,7 +176,7 @@ kbd{font:12px var(--mono);border:1px solid var(--rule);border-bottom-width:2px;b
 .terminal-form{display:flex;align-items:center;gap:10px;border-top:1px solid var(--rule);padding:12px 16px}
 .prompt{color:var(--signal);flex:none}
 .terminal-form input{flex:1;min-width:0;background:transparent;border:0;outline:none;padding:6px 2px;font:inherit;color:var(--paper)}
-.terminal-form input::placeholder{color:#93a6bf88}
+.terminal-form input::placeholder{color:#9b9ba188}
 .terminal-tools{display:flex;gap:6px;flex-wrap:wrap;padding:0 16px 14px}
 
 /* contato */
@@ -193,7 +193,7 @@ footer{border-top:1px solid var(--rule);padding:22px 0;color:var(--dim);font-siz
 footer .wrap{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap}
 
 /* barra de status */
-.statusbar{position:fixed;left:0;right:0;bottom:0;z-index:30;background:#0a111df2;border-top:1px solid var(--rule);font:12px/1.3 var(--mono);padding:10px 20px calc(10px + env(safe-area-inset-bottom));display:flex;justify-content:space-between;align-items:center;gap:14px;color:var(--dim)}
+.statusbar{position:fixed;left:0;right:0;bottom:0;z-index:30;background:#050505f2;border-top:1px solid var(--rule);font:12px/1.3 var(--mono);padding:10px 20px calc(10px + env(safe-area-inset-bottom));display:flex;justify-content:space-between;align-items:center;gap:14px;color:var(--dim)}
 .statusbar a{min-width:0;overflow:hidden;white-space:nowrap;text-overflow:ellipsis}
 .statusbar a:hover{color:var(--paper)}
 .statusbar .avail{color:var(--signal);white-space:nowrap}
@@ -201,7 +201,7 @@ footer .wrap{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap}
 
 /* paleta */
 dialog{width:min(580px,calc(100% - 32px));max-height:80dvh;padding:0;border:1px solid var(--rule);background:var(--deck);color:var(--paper);border-radius:10px;box-shadow:0 30px 120px #000a}
-dialog::backdrop{background:#0e1726cc;backdrop-filter:blur(3px)}
+dialog::backdrop{background:#000000cc;backdrop-filter:blur(3px)}
 .palette-head{display:flex;gap:8px;align-items:center;padding:14px;border-bottom:1px solid var(--rule)}
 .palette-head input{flex:1;min-width:0;background:var(--ink);border:1px solid var(--rule);border-radius:6px;padding:12px;font-size:15px}
 .palette-list{max-height:52vh;overflow:auto;padding:8px}
@@ -254,7 +254,7 @@ dialog::backdrop{background:#0e1726cc;backdrop-filter:blur(3px)}
 <header>
   <nav class="wrap" aria-label="Navegação principal">
     <a class="brand" href="#inicio" aria-label="Guilherme Califoni, início">
-      <svg width="26" height="26" viewBox="0 0 32 32" aria-hidden="true"><rect width="32" height="32" rx="6" fill="#131f33" stroke="#243450"/><circle cx="9" cy="16" r="3" fill="#f2b544"/><circle cx="23" cy="16" r="3" fill="#e6edf5"/><path d="M12 16h8" stroke="#f2b544" stroke-width="2"/></svg>
+      <svg width="26" height="26" viewBox="0 0 32 32" aria-hidden="true"><rect width="32" height="32" rx="6" fill="#0c0c0d" stroke="#26262a"/><circle cx="9" cy="16" r="3" fill="#f2b544"/><circle cx="23" cy="16" r="3" fill="#ededed"/><path d="M12 16h8" stroke="#f2b544" stroke-width="2"/></svg>
       Guilherme Califoni
     </a>
     <div class="navlinks">
