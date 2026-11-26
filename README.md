@@ -35,7 +35,7 @@ I build AI-powered applications and software that solve practical business probl
 
 - **Applied AI:** OpenAI / ChatGPT, Claude / Claude Code, Gemini, LLM APIs, RAG, agents, embeddings, MCP, function calling, LangChain and LangGraph.
 - **Software engineering:** Python, TypeScript, JavaScript, FastAPI, Node.js, React, Next.js, REST APIs and webhooks.
-- **Data and infrastructure:** SQL, PostgreSQL, Supabase, GitHub Actions, CI/CD, automated testing, Vercel and Render.
+- **Data and infrastructure:** Databricks, SQL, PostgreSQL, Supabase, GitHub Actions, CI/CD, automated testing, Vercel and Render.
 - **Business automation:** n8n, CRM integrations, Lovable, data analysis and process optimization.
 
 ## Sobre mim 🇧🇷
