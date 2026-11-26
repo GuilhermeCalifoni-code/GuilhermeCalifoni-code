@@ -1,64 +1,599 @@
 <!DOCTYPE html>
-<html lang="pt-BR"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="description" content="Portfólio de Guilherme Califoni: engenharia de IA aplicada, automação e software."><meta name="theme-color" content="#101b23"><title>Guilherme Califoni | Applied AI & Software Engineering</title>
-<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet"><style>
-:root{color-scheme:dark;--bg:#101b23;--panel:#17252e;--line:#34444d;--text:#edf3f1;--muted:#bac9cb;--accent:#9de3bc;--mono:ui-monospace,SFMono-Regular,Consolas,monospace}*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:var(--bg);color:var(--text);font:16px/1.65 system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif}a{color:inherit;text-decoration:none}a:focus-visible,button:focus-visible{outline:3px solid var(--accent);outline-offset:4px}.wrap{max-width:1140px;padding:0 28px;margin:auto}header{border-bottom:1px solid var(--line)}nav{display:flex;align-items:center;justify-content:space-between;gap:20px;min-height:78px}.brand{font-weight:800;letter-spacing:-.04em;font-size:21px}.brand span{color:var(--accent)}.navlinks{display:flex;flex-wrap:wrap;gap:22px;color:var(--muted);font-size:14px}.navlinks a:hover,.link:hover{color:var(--accent)}.hero{padding:90px 0 68px;display:grid;grid-template-columns:1.5fr .8fr;gap:52px;align-items:center}.mono,.eyebrow{font:12px/1.5 var(--mono);letter-spacing:.07em;color:var(--accent);text-transform:uppercase}.hero h1{font-size:clamp(44px,7vw,84px);line-height:1.03;letter-spacing:-.07em;margin:18px 0 24px}.hero h1 span{color:var(--accent)}.hero p{color:var(--muted);font-size:19px;max-width:640px}.actions{display:flex;gap:12px;flex-wrap:wrap;margin-top:30px}.button{display:inline-block;border:1px solid var(--line);border-radius:8px;padding:12px 18px;font-weight:700;font-size:14px}.primary{background:var(--accent);color:#10251a;border-color:var(--accent)}.button:hover{opacity:.86}.terminal{border:1px solid var(--line);background:var(--panel);border-radius:14px;overflow:hidden;font:13px/1.9 var(--mono)}.terminal-head{border-bottom:1px solid var(--line);padding:12px 18px;color:var(--muted)}.terminal-body{padding:23px 20px;overflow-wrap:anywhere}.terminal-body b{color:var(--accent)}.terminal-body span{color:var(--muted)}.section{padding:58px 0;border-top:1px solid var(--line)}h2{font-size:clamp(30px,4vw,46px);line-height:1.15;letter-spacing:-.045em;margin:10px 0 16px}h3{font-size:21px;line-height:1.3;margin:18px 0 8px;letter-spacing:-.025em}.intro{color:var(--muted);max-width:700px;margin-bottom:30px}.grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:16px}.project,.experience,.skill{background:var(--panel);border:1px solid var(--line);border-radius:12px;padding:24px;min-width:0}.project{display:flex;flex-direction:column}.project[hidden]{display:none}.project-top{display:flex;justify-content:space-between;gap:12px;align-items:flex-start}.status{font-size:11px;color:var(--muted);text-align:right}.project p,.experience p,.skill p{color:var(--muted);margin:0 0 16px}.project .stack{font:12px/1.6 var(--mono);color:var(--accent);margin-top:auto;padding-top:7px}.link{font-size:14px;font-weight:700;padding-top:10px;border-top:1px solid var(--line)}.filters{display:flex;flex-wrap:wrap;gap:8px;margin:24px 0}.filters button{background:transparent;color:var(--muted);border:1px solid var(--line);border-radius:6px;padding:9px 13px;font:inherit;font-size:13px;cursor:pointer}.filters button[aria-pressed=true]{background:var(--accent);color:#10251a;border-color:var(--accent)}.experience h3,.skill h3{margin-top:8px}.skills{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:16px}.contact{display:flex;justify-content:space-between;align-items:center;gap:24px;flex-wrap:wrap}footer{border-top:1px solid var(--line);padding:24px 0;color:var(--muted);font-size:13px}@media(max-width:760px){.wrap{padding:0 20px}nav{align-items:flex-start;flex-direction:column;padding:18px 0;gap:10px}.navlinks{gap:15px}.hero{grid-template-columns:1fr;padding:55px 0;gap:28px}.grid,.skills{grid-template-columns:1fr}.section{padding:44px 0}.hero p{font-size:17px}}@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Guilherme Califoni | Engenharia de IA aplicada</title>
+<meta name="description" content="Guilherme Califoni: engenharia de IA aplicada, automação e software. Projetos com LLMs, visão computacional, dados e produtos em produção.">
+<meta name="theme-color" content="#0e1726">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Guilherme Califoni | Engenharia de IA aplicada">
+<meta property="og:description" content="Do problema de negócio ao produto em uso: IA, automação e software.">
+<meta property="og:url" content="https://guilherme-califoni-portfolio.vercel.app/">
+<meta name="twitter:card" content="summary">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='6' fill='%230e1726'/%3E%3Ccircle cx='9' cy='16' r='3' fill='%23f2b544'/%3E%3Ccircle cx='23' cy='16' r='3' fill='%23e6edf5'/%3E%3Cpath d='M12 16h8' stroke='%23f2b544' stroke-width='2'/%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans+Condensed:wght@500;600;700&family=IBM+Plex+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{
+  color-scheme:dark;
+  --ink:#0e1726;      /* fundo: azul de prancheta */
+  --deck:#131f33;     /* superfícies */
+  --rule:#243450;     /* linhas e bordas */
+  --paper:#e6edf5;    /* texto */
+  --dim:#93a6bf;      /* texto secundário */
+  --signal:#f2b544;   /* sinal: o que está vivo / ativo */
+  --wire:#8cc8ff;     /* links e dados */
+  --display:"IBM Plex Sans Condensed","Arial Narrow",system-ui,sans-serif;
+  --sans:"IBM Plex Sans",system-ui,-apple-system,"Segoe UI",sans-serif;
+  --mono:"IBM Plex Mono",ui-monospace,SFMono-Regular,Consolas,monospace;
+  --bar:36px;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth;scroll-padding-top:84px;scroll-padding-bottom:60px}
+body{margin:0;background:var(--ink);color:var(--paper);font:17px/1.6 var(--sans);padding-bottom:calc(var(--bar) + env(safe-area-inset-bottom));
+  background-image:linear-gradient(#93a6bf0b 1px,transparent 1px),linear-gradient(90deg,#93a6bf0b 1px,transparent 1px);background-size:48px 48px;background-attachment:fixed}
+a{color:inherit;text-decoration:none}
+button,input{font:inherit;color:inherit}
+button{cursor:pointer}
+:focus-visible{outline:2px solid var(--signal);outline-offset:3px}
+.wrap{max-width:1180px;margin:0 auto;padding:0 32px}
+.sr-only{position:absolute;width:1px;height:1px;clip-path:inset(50%);overflow:hidden;white-space:nowrap}
+.skiplink{position:absolute;left:12px;top:-100px;background:var(--signal);color:var(--ink);padding:8px 12px;z-index:40;border-radius:4px}
+.skiplink:focus{top:12px}
 
-:root{--bg:#101b23;--panel:#17252e;--line:#34444d;--text:#e8f0f2;--muted:#aabcc5;--accent:#5ee7e7;--mono:"JetBrains Mono",ui-monospace,SFMono-Regular,Consolas,monospace;--sans:Inter,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;--bar:34px;--mx:50%;--my:20%}
-html{scroll-padding-top:20px;scroll-padding-bottom:70px}body{font-family:var(--sans);padding-bottom:calc(var(--bar) + env(safe-area-inset-bottom));background-color:var(--bg);background-image:linear-gradient(#aabcc509 1px,transparent 1px),linear-gradient(90deg,#aabcc509 1px,transparent 1px);background-size:32px 32px}
-body::before{content:"";position:fixed;inset:0;pointer-events:none;z-index:-1;background:radial-gradient(420px circle at var(--mx) var(--my),#5ee7e710,transparent 75%)}body{isolation:isolate}header{background:#101b23e8}nav,.brand,.status,.filters button,.button,.link,.terminal,footer,.statusbar{font-family:var(--mono)}.brand{font-size:21px}.navlinks{font-size:12px;align-items:center;gap:18px}.button{font-size:12px}.primary,.filters button[aria-pressed=true]{color:var(--bg);background:var(--accent)}.hero{grid-template-columns:minmax(0,1.15fr) minmax(0,1fr);gap:36px;padding:76px 0 64px}.hero h1{font-size:clamp(44px,6.6vw,84px)}.project,.experience,.skill,.terminal{border-radius:6px;background:var(--panel)}.project:focus{outline:2px solid var(--accent);outline-offset:3px}.status{font-size:10px}.section{scroll-margin-top:14px}button,input{font:inherit}button{cursor:pointer}.keybtn,.term-btn{border:1px solid var(--line);color:var(--text);background:var(--bg);border-radius:4px;padding:6px 9px;font:11px var(--mono)}.keybtn:hover,.term-btn:hover{border-color:var(--accent);color:var(--accent)}.terminal{min-width:0;box-shadow:0 14px 40px #0003;font-size:12px;line-height:1.65}.terminal-head{display:flex;align-items:center;justify-content:space-between;gap:8px;font-size:11px;padding:12px}.terminal-head strong{color:var(--accent);font-weight:600}.terminal-log{height:250px;overflow:auto;overscroll-behavior:contain;padding:14px 15px;white-space:pre-wrap;overflow-wrap:anywhere;color:var(--muted);scrollbar-color:var(--line) var(--panel)}.terminal-log .echo{color:var(--accent)}.terminal-log a{color:var(--accent);text-decoration:underline}.terminal-form{display:flex;align-items:center;gap:8px;border-top:1px solid var(--line);padding:12px}.prompt{color:var(--accent);flex:none}.terminal-form input{min-width:0;width:100%;flex:1;background:transparent;color:var(--text);border:0;font:inherit;outline:none;padding:8px 3px}.terminal-form input:focus-visible{outline:2px solid var(--accent);outline-offset:2px}.terminal-form input::placeholder{color:var(--muted)}.terminal-tools{display:flex;gap:6px;flex-wrap:wrap;padding:0 12px 12px}.terminal-tools .term-btn{min-height:30px}.terminal-hint{font-size:10px;border-top:1px solid var(--line);color:var(--muted);padding:8px 12px}.statusbar{position:fixed;bottom:0;left:0;right:0;z-index:10;background:var(--bg);border-top:1px solid var(--line);font-size:11px;line-height:1.3;padding:8px 20px calc(8px + env(safe-area-inset-bottom));display:flex;align-items:center;justify-content:space-between;gap:12px}.statusbar a{color:var(--muted);min-width:0;overflow:hidden;white-space:nowrap;text-overflow:ellipsis}.statusbar a:hover{color:var(--accent)}.statusbar .availability{color:var(--accent);white-space:nowrap}.statusbar time{white-space:nowrap;color:var(--muted)}dialog{width:min(560px,calc(100% - 32px));max-height:80vh;max-height:80dvh;padding:0;border:1px solid var(--line);background:var(--panel);color:var(--text);border-radius:8px;box-shadow:0 24px 100px #0008}dialog::backdrop{background:#101b23cc}.palette-head{display:flex;align-items:center;gap:8px;border-bottom:1px solid var(--line);padding:14px}.palette-head input{flex:1;min-width:0;color:var(--text);background:var(--bg);padding:12px;border:1px solid var(--line);border-radius:4px;font-family:var(--mono);font-size:13px}.palette-list{max-height:50vh;overflow:auto;padding:8px}.palette-option{width:100%;display:flex;text-align:left;align-items:center;justify-content:space-between;gap:10px;border:1px solid transparent;border-radius:3px;background:none;color:var(--text);padding:12px;font:13px var(--mono)}.palette-option[aria-selected=true]{border-color:var(--accent);background:#5ee7e70d}.palette-option small{color:var(--muted);font-size:10px}.palette-foot{padding:12px;border-top:1px solid var(--line);font:11px var(--mono);color:var(--muted)}.sr-only{position:absolute;width:1px;height:1px;clip-path:inset(50%);overflow:hidden;white-space:nowrap}.skiplink{position:absolute;left:12px;top:-100px;background:var(--accent);color:var(--bg);padding:8px;z-index:30}.skiplink:focus{top:12px}
-@media(max-width:850px){.hero{grid-template-columns:1fr;gap:28px;padding:48px 0}.navlinks{gap:12px}.terminal-log{height:220px}}
-@media(max-width:540px){:root{--bar:60px}.statusbar{display:grid;grid-template-columns:1fr auto;gap:5px 8px;padding:7px 12px calc(7px + env(safe-area-inset-bottom));font-size:10px}.statusbar .availability{grid-column:1/-1;grid-row:2}.terminal-form input,.palette-head input{font-size:16px}.terminal-log{font-size:12px}.hero h1{font-size:clamp(40px,12vw,64px)}.navlinks{font-size:11px}.palette-option{font-size:12px}.palette-option small{max-width:75px;text-align:right}}
-@media(prefers-reduced-motion:reduce),(pointer:coarse){body::before{display:none}html{scroll-behavior:auto}}
+/* header */
+header{position:sticky;top:0;z-index:20;background:#0e1726d9;backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px);border-bottom:1px solid var(--rule)}
+nav{display:flex;align-items:center;justify-content:space-between;gap:24px;min-height:68px}
+.brand{display:flex;align-items:center;gap:10px;font:600 18px var(--display);letter-spacing:.01em}
+.brand svg{flex:none}
+.navlinks{display:flex;align-items:center;gap:26px;font-size:15px;color:var(--dim)}
+.navlinks a:hover{color:var(--paper)}
+.kbd-btn{display:inline-flex;align-items:center;gap:8px;border:1px solid var(--rule);background:var(--deck);border-radius:6px;padding:6px 10px;font-size:14px;color:var(--dim)}
+.kbd-btn:hover{border-color:var(--dim);color:var(--paper)}
+kbd{font:12px var(--mono);border:1px solid var(--rule);border-bottom-width:2px;border-radius:4px;padding:1px 5px;color:var(--paper);background:var(--ink)}
 
-</style></head><body><a class="skiplink" href="#inicio">Ir ao conteúdo</a><header><nav class="wrap" aria-label="Navegação principal"><a class="brand" href="#inicio">GC<span>.</span></a><div class="navlinks"><a href="#experiencia">Experiência</a><a href="#projetos">Projetos</a><a href="#stack">Tecnologias</a><a href="https://github.com/GuilhermeCalifoni-code">GitHub ↗</a><button type="button" class="keybtn" id="palette-trigger" aria-haspopup="dialog">Comandos <kbd>Ctrl/⌘ K</kbd></button></div></nav></header>
-<main class="wrap" id="inicio"><section class="hero" aria-labelledby="main-title"><div><div class="eyebrow">São Paulo, Brasil · Applied AI & Software Engineering</div><h1 id="main-title">Guilherme<br>Califoni<span>.</span></h1><p>Desenvolvo soluções de inteligência artificial, automação e software para transformar problemas de negócio em produtos e processos funcionais.</p><div class="actions"><a class="button primary" href="#projetos">Explorar projetos</a><a class="button" href="https://github.com/GuilhermeCalifoni-code">Perfil GitHub ↗</a></div></div><aside class="terminal" aria-label="Terminal interativo"><div class="terminal-head"><strong>GC / console</strong><span>shell local</span><button class="term-btn" id="skip-boot" type="button">Pular boot</button></div><div id="terminal-log" class="terminal-log" role="log" aria-live="polite" aria-label="Saída do terminal" tabindex="0"></div><form class="terminal-form" id="terminal-form"><label class="prompt" for="terminal-input">~/portfolio $</label><input id="terminal-input" aria-label="Digite um comando" placeholder="help" autocomplete="off" autocapitalize="none" spellcheck="false" enterkeyhint="go"><button class="term-btn" type="submit">Enter</button></form><div class="terminal-tools" aria-label="Atalhos do terminal"><button class="term-btn" type="button" data-command="help">help</button><button class="term-btn" type="button" data-command="ls projects">ls projects</button><button class="term-btn" type="button" data-command="stack">stack</button><button class="term-btn" type="button" id="complete-command">Tab ↹</button><button class="term-btn" type="button" id="prev-command">↑</button></div><div class="terminal-hint">↑ ↓ histórico · Tab completar · Ctrl/⌘ K navegar</div><noscript>O terminal precisa de JavaScript. Use os links de navegação acima.</noscript></aside></section>
-<section id="experiencia" class="section"><div class="eyebrow">01 / Experiência</div><h2>Tecnologia aplicada ao negócio.</h2><p class="intro">Experiência com sistemas corporativos, integração de serviços e automações voltadas à qualidade de dados e eficiência operacional.</p><div class="grid"><article class="experience"><div class="mono">Abr 2026 — atual</div><h3>G4 Educação</h3><p><strong>Estagiário de Estratégia — Aquisição</strong></p><p>Desenvolvimento de automações comerciais, validação inteligente de leads, otimização de campanhas de telefonia, distribuição de leads e assistentes de IA para suporte ao agendamento de reuniões.</p></article><article class="experience"><div class="mono">Ago 2025 — Abr 2026</div><h3>Cury Construtora</h3><p><strong>Jovem Aprendiz — TI</strong></p><p>Responsável pelo desenvolvimento e implantação de um sistema de centralização de dados de evolução e planejamento de obras. Atuação também em automações e chamados técnicos.</p></article></div></section>
-<section class="section" id="projetos"><div class="eyebrow">02 / Portfólio</div><h2>Projetos selecionados.</h2><p class="intro">Uma seleção de aplicações, projetos acadêmicos e estudos técnicos com documentação pública. Cada projeto identifica seu contexto de desenvolvimento.</p><div class="filters" role="group" aria-label="Filtrar projetos"><button type="button" data-filter="all" aria-pressed="true">Todos</button><button type="button" data-filter="IA aplicada" aria-pressed="false">IA aplicada</button><button type="button" data-filter="Visão computacional" aria-pressed="false">Visão computacional</button><button type="button" data-filter="Software" aria-pressed="false">Software</button><button type="button" data-filter="Dados &amp; ML" aria-pressed="false">Dados &amp; ML</button></div><div class="grid"><article class="project" id="project-advisor-ai-pedagogico" tabindex="-1" data-category="IA aplicada"><div class="project-top"><span class="mono">01 / IA aplicada</span><span class="status">Implementação disponível</span></div><h3>Pedagogical AI Advisor</h3><p>Assistente conversacional para construir planos de desenvolvimento docente, com geração estruturada e exportação para Word.</p><p class="stack">Python · FastAPI · LangChain · Gemini</p><a class="link" href="https://github.com/GuilhermeCalifoni-code/advisor-ai-pedagogico">Explorar repositório <span aria-hidden="true">↗</span></a></article><article class="project" id="project-motiva-field" tabindex="-1" data-category="Visão computacional"><div class="project-top"><span class="mono">02 / Visão computacional</span><span class="status">Acadêmico · em equipe</span></div><h3>Motiva Field</h3><p>Monitoramento de vegetação rodoviária e priorização de intervenções, com aplicativo de campo e evidências georreferenciadas.</p><p class="stack">Python · Flutter · GitHub Actions</p><a class="link" href="https://github.com/GuilhermeCalifoni-code/motiva-field">Explorar repositório <span aria-hidden="true">↗</span></a></article><article class="project" id="project-retrobook" tabindex="-1" data-category="Software"><div class="project-top"><span class="mono">03 / Software</span><span class="status">Finalizado · individual</span></div><h3>RetroBook</h3><p>Rede social literária com recomendações, comunidades, controle de acesso e suítes de smoke tests.</p><p class="stack">TypeScript · PostgreSQL · Prisma</p><a class="link" href="https://github.com/GuilhermeCalifoni-code/retrobook">Explorar repositório <span aria-hidden="true">↗</span></a></article><article class="project" id="project-receitas-de-vo" tabindex="-1" data-category="IA aplicada"><div class="project-top"><span class="mono">04 / IA aplicada</span><span class="status">Em produção · individual</span></div><h3>AI Chef — Receitas de Vó</h3><p>Aplicação full stack que gera receitas a partir de ingredientes disponíveis, integrando um modelo generativo.</p><p class="stack">FastAPI · React · Gemini</p><a class="link" href="https://github.com/GuilhermeCalifoni-code/receitas-de-v-">Explorar repositório <span aria-hidden="true">↗</span></a></article><article class="project" id="project-brazilian-energy-matrix" tabindex="-1" data-category="Dados & ML"><div class="project-top"><span class="mono">05 / Dados & ML</span><span class="status">Acadêmico</span></div><h3>Brazilian Energy Matrix</h3><p>Análise de dados públicos do ONS com classificação, regressão e clusterização.</p><p class="stack">Pandas · scikit-learn · Python</p><a class="link" href="https://github.com/GuilhermeCalifoni-code/An-lise_de_Dados_do_ONS_CP3_SERS">Explorar repositório <span aria-hidden="true">↗</span></a></article><article class="project" id="project-territorio-vivo" tabindex="-1" data-category="Software"><div class="project-top"><span class="mono">06 / Software</span><span class="status">Acadêmico · em equipe</span></div><h3>Território Vivo</h3><p>Aplicativo de indicadores urbanos com alertas explicáveis, funcionamento offline e testes automatizados.</p><p class="stack">Flutter · CI/CD · APIs</p><a class="link" href="https://github.com/GuilhermeCalifoni-code/territorio-vivo-gs2026">Explorar repositório <span aria-hidden="true">↗</span></a></article><article class="project" id="project-reinos-oniricos" tabindex="-1" data-category="Software"><div class="project-top"><span class="mono">07 / Software</span><span class="status">Pessoal</span></div><h3>Reinos Oníricos</h3><p>Plataforma colaborativa em tempo real com permissões por campanha e armazenamento privado.</p><p class="stack">React · Supabase · RLS</p><a class="link" href="https://github.com/GuilhermeCalifoni-code/reinos-on-ricos">Explorar repositório <span aria-hidden="true">↗</span></a></article></div></section>
-<section id="stack" class="section"><div class="eyebrow">03 / Toolkit</div><h2>Competências técnicas.</h2><div class="skills"><article class="skill"><h3>AI Engineering</h3><p>ChatGPT / OpenAI, Claude / Claude Code, Gemini, RAG, agentes, MCP, function calling, LangChain, LangGraph.</p></article><article class="skill"><h3>Software Engineering</h3><p>Python, TypeScript, JavaScript, FastAPI, Node.js, React, Next.js, REST APIs, Flutter.</p></article><article class="skill"><h3>Data & Automation</h3><p>PostgreSQL, Supabase, n8n, GitHub Actions, CI/CD, testes automatizados, CRM e análise de dados.</p></article></div></section>
-<section class="section contact" id="contato"><div><div class="eyebrow">04 / Conexões</div><h2>Vamos construir.</h2><p class="intro">Conheça meus projetos e acompanhe minha evolução técnica no GitHub.</p></div><a class="button primary" href="https://github.com/GuilhermeCalifoni-code">Acessar GitHub ↗</a></section></main><footer><div class="wrap">Guilherme Califoni · São Paulo · 2026</div></footer>
-<div class="statusbar" aria-label="Status do portfólio"><a id="commit-status" href="https://github.com/GuilhermeCalifoni-code?tab=repositories">git: consultando...</a><span class="availability">● status: open to opportunities</span><time id="sp-clock" aria-label="Hora de São Paulo">SP --:--:--</time></div><dialog id="command-palette" aria-labelledby="palette-title"><div class="palette-head"><h2 class="sr-only" id="palette-title">Paleta de comandos</h2><input id="palette-search" aria-label="Buscar seção ou projeto" role="combobox" aria-autocomplete="list" aria-expanded="true" aria-controls="palette-list" placeholder="Buscar seção ou projeto..."><button class="term-btn" type="button" id="palette-close">Esc</button></div><div class="palette-list" id="palette-list" role="listbox"></div><div class="palette-foot">↑ ↓ selecionar · Enter abrir · Esc fechar</div></dialog>
-<script>const buttons=document.querySelectorAll('[data-filter]');const projects=document.querySelectorAll('[data-category]');buttons.forEach(button=>button.addEventListener('click',()=>{buttons.forEach(b=>b.setAttribute('aria-pressed',String(b===button)));projects.forEach(p=>p.hidden=button.dataset.filter!=='all'&&p.dataset.category!==button.dataset.filter)}));</script>
+/* hero */
+.hero{padding:88px 0 0}
+.hero h1{font:700 clamp(60px,10.5vw,148px)/.88 var(--display);letter-spacing:-.025em;margin:0 0 32px;text-wrap:balance}
+.hero h1 .line{display:block}
+.hero h1 .line + .line{color:transparent;-webkit-text-stroke:1.5px var(--paper)}
+.lede{font-size:clamp(19px,2vw,23px);line-height:1.5;max-width:34em;margin:0 0 14px}
+.meta{color:var(--dim);font-size:15px;margin:0}
+.actions{display:flex;gap:12px;flex-wrap:wrap;margin-top:32px}
+.btn{display:inline-flex;align-items:center;gap:8px;border:1px solid var(--rule);border-radius:6px;padding:12px 20px;font-weight:600;font-size:15px;background:var(--deck);transition:border-color .15s}
+.btn:hover{border-color:var(--dim)}
+.btn.primary{background:var(--signal);border-color:var(--signal);color:var(--ink)}
+.btn.primary:hover{background:#f7c766}
+
+/* pipeline: o elemento memorável */
+.pipeline{margin:72px 0 0;padding:28px;border:1px solid var(--rule);border-radius:10px;background:linear-gradient(180deg,#131f33f2,#0e1726f2)}
+.pipeline-head{display:flex;justify-content:space-between;align-items:baseline;gap:16px;flex-wrap:wrap;margin-bottom:22px}
+.pipeline-head h2{font:600 22px var(--display);margin:0;letter-spacing:.005em}
+.pipeline-head p{margin:0;color:var(--dim);font-size:15px}
+.pipe{list-style:none;margin:0;padding:0;display:flex;align-items:stretch}
+.pipe li{flex:1 1 0;min-width:0;display:flex}
+.pipe .wire{flex:0 0 28px;align-self:center;height:2px;background:var(--rule);position:relative;transition:background .3s}
+.pipe .wire::after{content:"";position:absolute;right:-1px;top:-4px;border:5px solid transparent;border-left:6px solid var(--rule);border-right:0;transition:border-color .3s}
+.pipe .wire.lit{background:var(--signal)}
+.pipe .wire.lit::after{border-left-color:var(--signal)}
+.node{width:100%;text-align:left;background:var(--ink);border:1px solid var(--rule);border-radius:8px;padding:16px 16px 14px;display:flex;flex-direction:column;gap:4px;transition:border-color .3s,background .3s}
+.node:hover{border-color:var(--dim)}
+.node .n{font:500 13px var(--mono);color:var(--dim);transition:color .3s}
+.node .t{font:600 21px/1.15 var(--display)}
+.node .s{font-size:14px;color:var(--dim);line-height:1.4}
+.node .c{margin-top:auto;padding-top:10px;font:13px var(--mono);color:var(--wire)}
+.node.lit .n{color:var(--signal)}
+.node.lit{border-color:#f2b54466}
+.node[aria-pressed="true"]{border-color:var(--signal);background:#f2b54414}
+.readout{margin-top:22px;padding-top:22px;border-top:1px dashed var(--rule);display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.2fr);gap:32px;min-height:132px}
+.readout h3{font:600 26px/1.2 var(--display);margin:0 0 8px}
+.readout p{margin:0;color:var(--dim);max-width:44ch}
+.evidence{list-style:none;margin:0;padding:0;display:grid;gap:2px}
+.evidence li{display:flex;justify-content:space-between;gap:16px;padding:9px 0;border-bottom:1px solid var(--rule);font-size:15px}
+.evidence li:last-child{border-bottom:0}
+.evidence a,.evidence .what{font-weight:600}
+.evidence a{color:var(--wire)}
+.evidence a:hover{text-decoration:underline}
+.evidence .why{color:var(--dim);text-align:right}
+
+/* seções */
+.section{padding:112px 0 0}
+.section-head{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:32px;align-items:end;margin-bottom:44px}
+.section h2{font:700 clamp(38px,5vw,60px)/1 var(--display);letter-spacing:-.015em;margin:0}
+.section-head p{margin:0;color:var(--dim);max-width:46ch}
+
+/* experiência: linha do tempo real */
+.timeline{list-style:none;margin:0;padding:0;border-left:2px solid var(--rule);margin-left:6px}
+.timeline > li{position:relative;padding:0 0 48px 40px;display:grid;grid-template-columns:200px minmax(0,1fr);gap:32px}
+.timeline > li:last-child{padding-bottom:0}
+.timeline > li::before{content:"";position:absolute;left:-8px;top:8px;width:14px;height:14px;border-radius:50%;background:var(--ink);border:2px solid var(--dim)}
+.timeline > li.now::before{border-color:var(--signal);background:var(--signal);box-shadow:0 0 0 5px #f2b54426}
+.when{font:14px/1.5 var(--mono);color:var(--dim);padding-top:6px}
+.now .when{color:var(--signal)}
+.timeline h3{font:600 30px/1.1 var(--display);margin:0 0 4px}
+.role{color:var(--dim);margin:0 0 16px}
+.did{margin:0;padding:0;list-style:none;display:grid;gap:8px;max-width:62ch}
+.did li{padding-left:22px;position:relative}
+.did li::before{content:"";position:absolute;left:0;top:.75em;width:10px;height:2px;background:var(--wire)}
+
+/* projetos */
+.filters{display:flex;flex-wrap:wrap;gap:8px;margin:0 0 28px}
+.filters button{background:transparent;border:1px solid var(--rule);border-radius:999px;padding:8px 16px;font-size:14px;color:var(--dim)}
+.filters button:hover{color:var(--paper);border-color:var(--dim)}
+.filters button[aria-pressed="true"]{background:var(--paper);color:var(--ink);border-color:var(--paper)}
+.st{display:inline-flex;align-items:center;gap:8px;font:13px var(--mono);color:var(--dim)}
+.st::before{content:"";width:8px;height:8px;border-radius:50%;background:var(--dim)}
+.st[data-kind="prod"]{color:var(--signal)}
+.st[data-kind="prod"]::before{background:var(--signal);box-shadow:0 0 0 4px #f2b5442b}
+.st[data-kind="done"]::before{background:var(--wire)}
+.st[data-kind="own"]::before{background:var(--paper)}
+.features{display:grid;gap:16px;margin-bottom:16px}
+.feature{display:grid;grid-template-columns:minmax(0,1.5fr) minmax(0,1fr);gap:40px;background:var(--deck);border:1px solid var(--rule);border-radius:10px;padding:36px}
+.feature h3{font:700 clamp(30px,3.4vw,42px)/1.05 var(--display);margin:14px 0 12px;letter-spacing:-.01em}
+.feature p{margin:0 0 22px;color:var(--dim);max-width:50ch}
+.spec{margin:0;display:grid;grid-template-columns:auto minmax(0,1fr);gap:0;align-self:start;border-top:1px solid var(--rule)}
+.spec dt,.spec dd{padding:11px 0;border-bottom:1px solid var(--rule);font-size:15px;margin:0}
+.spec dt{color:var(--dim);padding-right:20px}
+.spec dd{font:14px/1.5 var(--mono)}
+.repo{display:inline-flex;gap:8px;align-items:center;font-weight:600;color:var(--wire);font-size:15px}
+.repo:hover{text-decoration:underline}
+.rows{list-style:none;margin:0;padding:0;border-top:1px solid var(--rule)}
+.row{display:grid;grid-template-columns:minmax(0,1.1fr) minmax(0,2fr) minmax(0,1.1fr) 120px;grid-template-areas:"name desc stack repo" "status desc stack repo";gap:4px 24px;align-items:start;padding:22px 8px;border-bottom:1px solid var(--rule)}
+.row > div:first-child{grid-area:name}.row .st-cell{grid-area:status}.row p{grid-area:desc}.row .stack{grid-area:stack;padding-top:3px}.row .repo{grid-area:repo;padding-top:3px}
+.row:hover{background:#131f3399}
+.row h3{font:600 22px/1.2 var(--display);margin:0 0 6px}
+.row p{margin:0;color:var(--dim);font-size:15px}
+.row .stack{font:13px/1.6 var(--mono);color:var(--paper)}
+.row .repo{justify-self:end}
+.project[hidden]{display:none}
+.project:focus{outline:2px solid var(--signal);outline-offset:4px}
+
+/* toolkit */
+.toolkit{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:40px}
+.toolkit h3{font:600 22px var(--display);margin:0 0 6px}
+.toolkit > div > p{color:var(--dim);font-size:15px;margin:0 0 16px}
+.chips{list-style:none;margin:0;padding:0;display:flex;flex-wrap:wrap;gap:8px}
+.chips li{border:1px solid var(--rule);border-radius:6px;padding:5px 10px;font-size:14px;background:var(--deck)}
+
+/* console */
+.console-grid{display:grid;grid-template-columns:minmax(0,.9fr) minmax(0,1.1fr);gap:48px;align-items:center}
+.console-grid h2{margin-bottom:16px}
+.console-grid > div > p{color:var(--dim);margin:0 0 12px;max-width:40ch}
+.terminal{border:1px solid var(--rule);background:#0a111d;border-radius:10px;overflow:hidden;font:14px/1.65 var(--mono);box-shadow:0 30px 80px #0006}
+.terminal-head{display:flex;align-items:center;gap:8px;padding:12px 14px;border-bottom:1px solid var(--rule);color:var(--dim);font-size:13px}
+.dots{display:flex;gap:6px;margin-right:6px}
+.dots i{width:10px;height:10px;border-radius:50%;background:var(--rule)}
+.dots i:first-child{background:var(--signal)}
+.terminal-head .grow{flex:1}
+.t-btn{border:1px solid var(--rule);background:var(--ink);border-radius:4px;padding:4px 9px;font:12px var(--mono);color:var(--dim)}
+.t-btn:hover{color:var(--paper);border-color:var(--dim)}
+.terminal-log{height:300px;overflow:auto;overscroll-behavior:contain;padding:16px;white-space:pre-wrap;overflow-wrap:anywhere;color:var(--dim);scrollbar-color:var(--rule) transparent}
+.terminal-log .echo{color:var(--paper)}
+.terminal-log .ok{color:var(--signal)}
+.terminal-log a{color:var(--wire);text-decoration:underline}
+.terminal-form{display:flex;align-items:center;gap:10px;border-top:1px solid var(--rule);padding:12px 16px}
+.prompt{color:var(--signal);flex:none}
+.terminal-form input{flex:1;min-width:0;background:transparent;border:0;outline:none;padding:6px 2px;font:inherit;color:var(--paper)}
+.terminal-form input::placeholder{color:#93a6bf88}
+.terminal-tools{display:flex;gap:6px;flex-wrap:wrap;padding:0 16px 14px}
+
+/* contato */
+.contact{padding:112px 0 96px}
+.contact-box{border:1px solid var(--rule);border-radius:10px;padding:48px;background:var(--deck);display:grid;grid-template-columns:minmax(0,1.2fr) minmax(0,1fr);gap:40px;align-items:center}
+.contact-box h2{font:700 clamp(40px,5.4vw,68px)/1 var(--display);margin:0 0 14px;letter-spacing:-.015em}
+.contact-box p{margin:0;color:var(--dim);max-width:42ch}
+.links{list-style:none;margin:0;padding:0;display:grid;gap:10px}
+.links a{display:flex;justify-content:space-between;align-items:center;gap:16px;border:1px solid var(--rule);border-radius:8px;padding:16px 18px;background:var(--ink);font-weight:600}
+.links a:hover{border-color:var(--signal)}
+.links small{font:13px var(--mono);color:var(--dim);font-weight:400}
+
+footer{border-top:1px solid var(--rule);padding:22px 0;color:var(--dim);font-size:14px}
+footer .wrap{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap}
+
+/* barra de status */
+.statusbar{position:fixed;left:0;right:0;bottom:0;z-index:30;background:#0a111df2;border-top:1px solid var(--rule);font:12px/1.3 var(--mono);padding:10px 20px calc(10px + env(safe-area-inset-bottom));display:flex;justify-content:space-between;align-items:center;gap:14px;color:var(--dim)}
+.statusbar a{min-width:0;overflow:hidden;white-space:nowrap;text-overflow:ellipsis}
+.statusbar a:hover{color:var(--paper)}
+.statusbar .avail{color:var(--signal);white-space:nowrap}
+.statusbar time{white-space:nowrap}
+
+/* paleta */
+dialog{width:min(580px,calc(100% - 32px));max-height:80dvh;padding:0;border:1px solid var(--rule);background:var(--deck);color:var(--paper);border-radius:10px;box-shadow:0 30px 120px #000a}
+dialog::backdrop{background:#0e1726cc;backdrop-filter:blur(3px)}
+.palette-head{display:flex;gap:8px;align-items:center;padding:14px;border-bottom:1px solid var(--rule)}
+.palette-head input{flex:1;min-width:0;background:var(--ink);border:1px solid var(--rule);border-radius:6px;padding:12px;font-size:15px}
+.palette-list{max-height:52vh;overflow:auto;padding:8px}
+.palette-option{display:flex;justify-content:space-between;align-items:center;gap:10px;padding:11px 12px;border-radius:6px;border:1px solid transparent;cursor:pointer;font-size:15px}
+.palette-option small{color:var(--dim);font:12px var(--mono)}
+.palette-option[aria-selected="true"]{border-color:var(--signal);background:#f2b54412}
+.palette-foot{padding:12px 14px;border-top:1px solid var(--rule);color:var(--dim);font:12px var(--mono)}
+
+/* responsivo */
+@media(max-width:980px){
+  .pipe{flex-direction:column}
+  .pipe .wire{flex:0 0 18px;width:2px;height:auto;align-self:flex-start;margin-left:28px}
+  .pipe .wire::after{right:auto;left:-4px;top:auto;bottom:-1px;border:5px solid transparent;border-top:6px solid var(--rule);border-bottom:0}
+  .pipe .wire.lit::after{border-top-color:var(--signal);border-left-color:transparent}
+  .node{flex-direction:row;flex-wrap:wrap;align-items:baseline;gap:4px 12px}
+  .node .s{flex-basis:100%;order:3}
+  .node .c{margin-left:auto;padding-top:0}
+  .readout,.section-head,.feature,.console-grid,.contact-box{grid-template-columns:1fr}
+  .readout{gap:18px}
+  .section-head{gap:14px}
+  .toolkit{grid-template-columns:1fr 1fr}
+  .row{grid-template-columns:minmax(0,1fr) auto;grid-template-areas:"name status" "desc desc" "stack stack" "repo repo";gap:8px 20px}
+  .row .st-cell{justify-self:end}
+  .row .repo{justify-self:start}
+  .timeline > li{grid-template-columns:1fr;gap:6px}
+}
+@media(max-width:640px){
+  :root{--bar:56px}
+  .wrap{padding:0 20px}
+  .navlinks a:not(.keep){display:none}
+  .hero{padding-top:56px}
+  .pipeline{padding:18px;margin-top:48px}
+  .feature,.contact-box{padding:24px}
+  .toolkit{grid-template-columns:1fr;gap:32px}
+  .section{padding-top:84px}
+  .timeline > li{padding-left:26px}
+  .evidence li{flex-direction:column;gap:2px}
+  .evidence .why{text-align:left}
+  .statusbar{display:grid;grid-template-columns:1fr auto;gap:4px 10px;padding:8px 14px calc(8px + env(safe-area-inset-bottom));font-size:11px}
+  .statusbar .avail{grid-column:1/-1;grid-row:2}
+  .terminal-form input,.palette-head input{font-size:16px}
+  .terminal-log{height:260px;font-size:13px}
+}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*{transition:none!important}}
+</style>
+</head>
+<body>
+<a class="skiplink" href="#conteudo">Ir ao conteúdo</a>
+
+<header>
+  <nav class="wrap" aria-label="Navegação principal">
+    <a class="brand" href="#inicio" aria-label="Guilherme Califoni, início">
+      <svg width="26" height="26" viewBox="0 0 32 32" aria-hidden="true"><rect width="32" height="32" rx="6" fill="#131f33" stroke="#243450"/><circle cx="9" cy="16" r="3" fill="#f2b544"/><circle cx="23" cy="16" r="3" fill="#e6edf5"/><path d="M12 16h8" stroke="#f2b544" stroke-width="2"/></svg>
+      Guilherme Califoni
+    </a>
+    <div class="navlinks">
+      <a href="#experiencia">Experiência</a>
+      <a class="keep" href="#projetos">Projetos</a>
+      <a href="#stack">Stack</a>
+      <a href="#contato">Contato</a>
+      <button type="button" class="kbd-btn" id="palette-trigger" aria-haspopup="dialog">Buscar <kbd>Ctrl K</kbd></button>
+    </div>
+  </nav>
+</header>
+
+<main id="conteudo">
+<section class="wrap hero" id="inicio" aria-labelledby="main-title">
+  <h1 id="main-title"><span class="line">Guilherme</span><span class="line">Califoni</span></h1>
+  <p class="lede">Engenharia de IA aplicada. Pego um problema real de operação, organizo os dados, coloco o modelo certo no lugar certo e entrego algo que as pessoas usam.</p>
+  <p class="meta">Estratégia e Aquisição no G4 Educação. Ciência da Computação na FIAP. São Paulo.</p>
+  <div class="actions">
+    <a class="btn primary" href="#projetos">Ver projetos</a>
+    <a class="btn" href="https://github.com/GuilhermeCalifoni-code" rel="noopener">GitHub ↗</a>
+  </div>
+
+  <div class="pipeline" aria-labelledby="pipe-title">
+    <div class="pipeline-head">
+      <h2 id="pipe-title">Como um projeto anda comigo</h2>
+      <p>Escolha uma etapa para ver onde já fiz isso.</p>
+    </div>
+    <ol class="pipe" id="pipe">
+      <li><button class="node" type="button" data-stage="0" aria-pressed="false" aria-controls="readout"><span class="n">1</span><span class="t">Problema</span><span class="s">Entender a operação antes do código</span><span class="c"></span></button></li>
+      <li aria-hidden="true" class="wire"></li>
+      <li><button class="node" type="button" data-stage="1" aria-pressed="false" aria-controls="readout"><span class="n">2</span><span class="t">Dados</span><span class="s">Coletar, limpar e centralizar</span><span class="c"></span></button></li>
+      <li aria-hidden="true" class="wire"></li>
+      <li><button class="node" type="button" data-stage="2" aria-pressed="false" aria-controls="readout"><span class="n">3</span><span class="t">Modelo</span><span class="s">IA só onde muda o resultado</span><span class="c"></span></button></li>
+      <li aria-hidden="true" class="wire"></li>
+      <li><button class="node" type="button" data-stage="3" aria-pressed="false" aria-controls="readout"><span class="n">4</span><span class="t">Automação</span><span class="s">Integrar e rodar sem ninguém apertar botão</span><span class="c"></span></button></li>
+      <li aria-hidden="true" class="wire"></li>
+      <li><button class="node" type="button" data-stage="4" aria-pressed="false" aria-controls="readout"><span class="n">5</span><span class="t">Produto</span><span class="s">Colocar na mão de quem usa</span><span class="c"></span></button></li>
+    </ol>
+    <div class="readout" id="readout" aria-live="polite">
+      <div><h3>Problema</h3><p>Entender a operação antes do código.</p></div>
+      <ul class="evidence"></ul>
+    </div>
+  </div>
+</section>
+
+<section class="wrap section" id="experiencia" aria-labelledby="exp-title">
+  <div class="section-head">
+    <h2 id="exp-title">Experiência</h2>
+    <p>Sistemas internos, integrações e automações em empresas, com foco em qualidade de dados e menos trabalho manual.</p>
+  </div>
+  <ol class="timeline">
+    <li class="now">
+      <div class="when">abr 2026 – atual</div>
+      <div>
+        <h3>G4 Educação</h3>
+        <p class="role">Estagiário de Estratégia, time de Aquisição</p>
+        <ul class="did">
+          <li>Automações comerciais e validação inteligente de leads</li>
+          <li>Distribuição de leads e otimização de campanhas de telefonia</li>
+          <li>Assistentes de IA que apoiam o agendamento de reuniões</li>
+        </ul>
+      </div>
+    </li>
+    <li>
+      <div class="when">ago 2025 – abr 2026</div>
+      <div>
+        <h3>Cury Construtora</h3>
+        <p class="role">Jovem Aprendiz, TI</p>
+        <ul class="did">
+          <li>Desenvolvi e implantei o sistema que centraliza os dados de evolução e planejamento das obras</li>
+          <li>Automações internas e atendimento de chamados técnicos</li>
+        </ul>
+      </div>
+    </li>
+  </ol>
+</section>
+
+<section class="wrap section" id="projetos" aria-labelledby="proj-title">
+  <div class="section-head">
+    <h2 id="proj-title">Projetos</h2>
+    <p>Aplicações, projetos acadêmicos e estudos com código aberto. Cada um diz em que contexto foi feito.</p>
+  </div>
+  <div class="filters" role="group" aria-label="Filtrar projetos por área">
+    <button type="button" data-filter="all" aria-pressed="true">Todos</button>
+    <button type="button" data-filter="IA aplicada" aria-pressed="false">IA aplicada</button>
+    <button type="button" data-filter="Visão computacional" aria-pressed="false">Visão computacional</button>
+    <button type="button" data-filter="Software" aria-pressed="false">Software</button>
+    <button type="button" data-filter="Dados &amp; ML" aria-pressed="false">Dados &amp; ML</button>
+  </div>
+
+  <div class="features">
+    <article class="project feature" id="project-receitas-de-vo" tabindex="-1" data-category="IA aplicada" data-slug="ai-chef">
+      <div>
+        <span class="st" data-kind="prod">em produção</span>
+        <h3>AI Chef — Receitas de Vó</h3>
+        <p>Aplicação full stack que gera receitas a partir dos ingredientes que a pessoa tem em casa, com um modelo generativo por trás da API.</p>
+        <a class="repo link" href="https://github.com/GuilhermeCalifoni-code/receitas-de-v-" rel="noopener">Ver repositório ↗</a>
+      </div>
+      <dl class="spec"><dt>Área</dt><dd>IA aplicada</dd><dt>Contexto</dt><dd>Individual</dd><dt>Stack</dt><dd class="stack">FastAPI, React, Gemini</dd></dl>
+    </article>
+    <article class="project feature" id="project-advisor-ai-pedagogico" tabindex="-1" data-category="IA aplicada" data-slug="advisor">
+      <div>
+        <span class="st" data-kind="done">implementado</span>
+        <h3>Pedagogical AI Advisor</h3>
+        <p>Assistente conversacional que monta planos de desenvolvimento docente, com geração estruturada e exportação direto para Word.</p>
+        <a class="repo link" href="https://github.com/GuilhermeCalifoni-code/advisor-ai-pedagogico" rel="noopener">Ver repositório ↗</a>
+      </div>
+      <dl class="spec"><dt>Área</dt><dd>IA aplicada</dd><dt>Contexto</dt><dd>Individual</dd><dt>Stack</dt><dd class="stack">Python, FastAPI, LangChain, Gemini</dd></dl>
+    </article>
+    <article class="project feature" id="project-motiva-field" tabindex="-1" data-category="Visão computacional" data-slug="motiva-field">
+      <div>
+        <span class="st" data-kind="acad">acadêmico, em equipe</span>
+        <h3>Motiva Field</h3>
+        <p>Monitoramento de vegetação em rodovias com visão computacional, priorização de intervenções e um aplicativo de campo com evidências georreferenciadas.</p>
+        <a class="repo link" href="https://github.com/GuilhermeCalifoni-code/motiva-field" rel="noopener">Ver repositório ↗</a>
+      </div>
+      <dl class="spec"><dt>Área</dt><dd>Visão computacional</dd><dt>Contexto</dt><dd>FIAP, em equipe</dd><dt>Stack</dt><dd class="stack">Python, Flutter, GitHub Actions</dd></dl>
+    </article>
+  </div>
+
+  <ul class="rows">
+    <li class="project row" id="project-retrobook" tabindex="-1" data-category="Software" data-slug="retrobook">
+      <div><h3>RetroBook</h3></div>
+      <div class="st-cell"><span class="st" data-kind="done">finalizado, individual</span></div>
+      <p>Rede social literária com recomendações, comunidades, controle de acesso e smoke tests.</p>
+      <span class="stack">TypeScript, PostgreSQL, Prisma</span>
+      <a class="repo link" href="https://github.com/GuilhermeCalifoni-code/retrobook" rel="noopener" aria-label="Repositório do RetroBook">Repositório ↗</a>
+    </li>
+    <li class="project row" id="project-territorio-vivo" tabindex="-1" data-category="Software" data-slug="territorio-vivo">
+      <div><h3>Território Vivo</h3></div>
+      <div class="st-cell"><span class="st" data-kind="acad">acadêmico, em equipe</span></div>
+      <p>App de indicadores urbanos com alertas explicáveis, funcionamento offline e testes automatizados.</p>
+      <span class="stack">Flutter, CI/CD, APIs</span>
+      <a class="repo link" href="https://github.com/GuilhermeCalifoni-code/territorio-vivo-gs2026" rel="noopener" aria-label="Repositório do Território Vivo">Repositório ↗</a>
+    </li>
+    <li class="project row" id="project-reinos-oniricos" tabindex="-1" data-category="Software" data-slug="reinos-oniricos">
+      <div><h3>Reinos Oníricos</h3></div>
+      <div class="st-cell"><span class="st" data-kind="own">pessoal</span></div>
+      <p>Plataforma colaborativa em tempo real, com permissões por campanha e armazenamento privado.</p>
+      <span class="stack">React, Supabase, RLS</span>
+      <a class="repo link" href="https://github.com/GuilhermeCalifoni-code/reinos-on-ricos" rel="noopener" aria-label="Repositório do Reinos Oníricos">Repositório ↗</a>
+    </li>
+    <li class="project row" id="project-brazilian-energy-matrix" tabindex="-1" data-category="Dados &amp; ML" data-slug="energy-matrix">
+      <div><h3>Brazilian Energy Matrix</h3></div>
+      <div class="st-cell"><span class="st" data-kind="acad">acadêmico</span></div>
+      <p>Análise de dados públicos do ONS com classificação, regressão e clusterização.</p>
+      <span class="stack">Python, Pandas, scikit-learn</span>
+      <a class="repo link" href="https://github.com/GuilhermeCalifoni-code/An-lise_de_Dados_do_ONS_CP3_SERS" rel="noopener" aria-label="Repositório do Brazilian Energy Matrix">Repositório ↗</a>
+    </li>
+  </ul>
+</section>
+
+<section class="wrap section" id="stack" aria-labelledby="stack-title">
+  <div class="section-head">
+    <h2 id="stack-title">Stack</h2>
+    <p>O que uso no dia a dia, separado pelo tipo de problema que resolve.</p>
+  </div>
+  <div class="toolkit">
+    <div class="skill">
+      <h3>Engenharia de IA</h3>
+      <p>Modelos, agentes e integração com LLMs.</p>
+      <ul class="chips"><li>OpenAI</li><li>Claude e Claude Code</li><li>Gemini</li><li>RAG</li><li>Agentes</li><li>MCP</li><li>Function calling</li><li>LangChain</li><li>LangGraph</li></ul>
+    </div>
+    <div class="skill">
+      <h3>Software</h3>
+      <p>APIs, front-end e apps mobile.</p>
+      <ul class="chips"><li>Python</li><li>TypeScript</li><li>JavaScript</li><li>FastAPI</li><li>Node.js</li><li>React</li><li>Next.js</li><li>REST</li><li>Flutter</li></ul>
+    </div>
+    <div class="skill">
+      <h3>Dados e automação</h3>
+      <p>Banco, pipelines e processos que rodam sozinhos.</p>
+      <ul class="chips"><li>PostgreSQL</li><li>Supabase</li><li>n8n</li><li>GitHub Actions</li><li>CI/CD</li><li>Testes automatizados</li><li>Integração com CRM</li><li>Análise de dados</li></ul>
+    </div>
+  </div>
+</section>
+
+<section class="wrap section" id="console" aria-labelledby="console-title">
+  <div class="console-grid">
+    <div>
+      <h2 id="console-title">Prefere o teclado?</h2>
+      <p>Este console navega pelo site. Digite <code>help</code> para ver os comandos ou use os atalhos abaixo dele.</p>
+      <p>Em qualquer lugar da página, <kbd>Ctrl K</kbd> abre a busca.</p>
+    </div>
+    <div class="terminal" role="region" aria-label="Console interativo">
+      <div class="terminal-head"><span class="dots" aria-hidden="true"><i></i><i></i><i></i></span><span class="grow">guilherme@portfolio: ~</span><button class="t-btn" id="skip-boot" type="button">Pular</button></div>
+      <div id="terminal-log" class="terminal-log" role="log" aria-live="polite" aria-label="Saída do console" tabindex="0"></div>
+      <form class="terminal-form" id="terminal-form">
+        <label class="prompt" for="terminal-input">~ $</label>
+        <input id="terminal-input" placeholder="digite help" autocomplete="off" autocapitalize="none" spellcheck="false" enterkeyhint="go">
+        <button class="t-btn" type="submit">Enter</button>
+      </form>
+      <div class="terminal-tools" aria-label="Atalhos do console">
+        <button class="t-btn" type="button" data-command="whoami">whoami</button>
+        <button class="t-btn" type="button" data-command="ls projects">ls projects</button>
+        <button class="t-btn" type="button" data-command="experience">experience</button>
+        <button class="t-btn" type="button" data-command="stack">stack</button>
+        <button class="t-btn" type="button" data-command="contact">contact</button>
+      </div>
+      <noscript><p style="padding:0 16px 16px">O console precisa de JavaScript. Use o menu do topo.</p></noscript>
+    </div>
+  </div>
+</section>
+
+<section class="wrap contact" id="contato" aria-labelledby="contact-title">
+  <div class="contact-box">
+    <div>
+      <h2 id="contact-title">Vamos conversar.</h2>
+      <p>Estágio, projeto com IA ou uma automação que está travando sua operação: me chama por um dos canais ao lado.</p>
+    </div>
+    <ul class="links" id="contact-links">
+      <li><a href="https://github.com/GuilhermeCalifoni-code" rel="noopener">GitHub <small>GuilhermeCalifoni-code ↗</small></a></li>
+    </ul>
+  </div>
+</section>
+</main>
+
+<footer><div class="wrap"><span>Guilherme Califoni, São Paulo, 2026</span><span>HTML, CSS e JavaScript puros. Sem framework.</span></div></footer>
+
+<div class="statusbar" aria-label="Status">
+  <a id="commit-status" href="https://github.com/GuilhermeCalifoni-code?tab=repositories">git: consultando…</a>
+  <span class="avail">● aberto a oportunidades</span>
+  <time id="sp-clock">SP --:--:--</time>
+</div>
+
+<dialog id="command-palette" aria-labelledby="palette-title">
+  <div class="palette-head">
+    <h2 class="sr-only" id="palette-title">Busca</h2>
+    <input id="palette-search" aria-label="Buscar seção ou projeto" role="combobox" aria-autocomplete="list" aria-expanded="true" aria-controls="palette-list" placeholder="Buscar seção ou projeto…">
+    <button class="t-btn" type="button" id="palette-close">Esc</button>
+  </div>
+  <div class="palette-list" id="palette-list" role="listbox"></div>
+  <div class="palette-foot">↑ ↓ escolher, Enter abrir, Esc fechar</div>
+</dialog>
+
 <script>
 (()=>{"use strict";
-const $=s=>document.querySelector(s), allOf=s=>Array.from(document.querySelectorAll(s));
-const input=$("#terminal-input"),log=$("#terminal-log"),skip=$("#skip-boot"),form=$("#terminal-form"),reduce=matchMedia("(prefers-reduced-motion: reduce)");
-const CONTACT={email:"[PREENCHER E-MAIL]",linkedin:"[PREENCHER LINK DO LINKEDIN]"};
-const entries=allOf(".project").map(p=>({id:p.id,slug:p.id.replace("project-",""),name:p.querySelector("h3").textContent,url:p.querySelector("a.link").href,status:p.querySelector(".status").textContent}));
-const commands=["help","whoami","ls projects","stack","contact","clear",...entries.map(p=>"open "+p.slug)];
-let history=[],position=0,draft="",bootTimer=null,booted=false;
-function line(value,cls){const el=document.createElement("div");el.textContent=value;if(cls)el.className=cls;log.append(el);while(log.children.length>160)log.firstElementChild.remove();log.scrollTop=log.scrollHeight}
-function finishBoot(){if(booted)return;booted=true;clearTimeout(bootTimer);skip.hidden=true;line("Console pronto. Digite help para começar.")}
-const boot=["[init] console local","[ok] índice: "+entries.length+" projetos","[ok] comandos e navegação disponíveis"];let step=0;
-function bootNext(){if(booted)return;if(step===boot.length){finishBoot();return}line(boot[step++]);bootTimer=setTimeout(bootNext,280)}
-if(reduce.matches)finishBoot();else bootNext();skip.addEventListener("click",finishBoot);
-function norm(s){return s.toLowerCase().normalize("NFD").replace(/[\u0300-\u036f]/g,"").trim()}
-function goProject(p){const all=document.querySelector('[data-filter="all"]');all.click();location.hash=p.id;document.getElementById(p.id).focus({preventScroll:true});document.getElementById(p.id).scrollIntoView({block:"center",behavior:reduce.matches?"instant":"smooth"})}
-function execute(raw){finishBoot();const cmd=raw.trim();if(!cmd)return;history.push(cmd);if(history.length>100)history.shift();position=history.length;draft="";input.value="";line("~/portfolio $ "+cmd,"echo");const key=norm(cmd);
-if(key==="clear"){log.replaceChildren();return}
-if(key==="help"){line("help           lista de comandos\nwhoami         perfil profissional\nls projects    projetos disponíveis\nopen <projeto> navegar para projeto\nstack          competências\ncontact        contatos\nclear          limpar terminal");return}
-if(key==="whoami"){line("Guilherme Califoni\nApplied AI & Software Engineering\nG4 Educação · Estratégia / Aquisição\nFIAP · Ciência da Computação\nSão Paulo, Brasil");return}
-if(key==="ls projects"){entries.forEach(p=>line(p.slug+" — "+p.name));return}
-if(key==="stack"){line(allOf(".skill").map(p=>p.querySelector("h3").textContent+": "+p.querySelector("p").textContent).join("\n\n"));return}
-if(key==="contact"){line("E-mail: "+CONTACT.email+"\nLinkedIn: "+CONTACT.linkedin+"\nGitHub: github.com/GuilhermeCalifoni-code");return}
-if(key.startsWith("open ")){const query=key.slice(5).trim();const p=entries.find(p=>norm(p.slug)===query||norm(p.name)===query);if(!p){line("Projeto não encontrado. Use ls projects ou Tab.");return}line("Abrindo "+p.name+" — "+p.status);goProject(p);return}
-line("Comando desconhecido. Digite help.");
+/* Preencha para exibir no contato e no console. Vazio = não aparece. */
+const CONTACT={email:"",linkedin:""};
+
+const $=s=>document.querySelector(s),all=s=>Array.from(document.querySelectorAll(s));
+const reduce=matchMedia("(prefers-reduced-motion: reduce)");
+const norm=s=>s.toLowerCase().normalize("NFD").replace(/[̀-ͯ]/g,"").trim();
+
+/* projetos */
+const entries=all(".project").map(p=>({id:p.id,slug:p.dataset.slug,name:p.querySelector("h3").textContent,url:p.querySelector("a.link").href,status:p.querySelector(".st").textContent}));
+const byId=Object.fromEntries(entries.map(e=>[e.id,e]));
+const filterBtns=all("[data-filter]");
+function setFilter(f){filterBtns.forEach(b=>b.setAttribute("aria-pressed",String(b.dataset.filter===f)));all(".project").forEach(p=>p.hidden=f!=="all"&&p.dataset.category!==f)}
+filterBtns.forEach(b=>b.addEventListener("click",()=>setFilter(b.dataset.filter)));
+function goTo(id){setFilter("all");const el=document.getElementById(id);if(!el)return;el.tabIndex=-1;history.replaceState(null,"","#"+id);el.scrollIntoView({block:id.startsWith("project-")?"center":"start",behavior:reduce.matches?"auto":"smooth"});el.focus({preventScroll:true})}
+
+/* contato */
+const links=$("#contact-links");
+if(CONTACT.linkedin){const li=document.createElement("li");li.innerHTML='<a rel="noopener"></a>';const a=li.firstChild;a.href=CONTACT.linkedin;a.innerHTML="LinkedIn <small>perfil ↗</small>";links.prepend(li)}
+if(CONTACT.email){const li=document.createElement("li");li.innerHTML="<a></a>";const a=li.firstChild;a.href="mailto:"+CONTACT.email;a.textContent="E-mail ";const s=document.createElement("small");s.textContent=CONTACT.email;a.append(s);links.prepend(li)}
+
+/* pipeline */
+const STAGES=[
+ {t:"Problema",d:"Antes de escolher ferramenta, entendo onde a operação perde tempo, dinheiro ou qualidade.",ev:[["exp","G4 Educação","validação e distribuição de leads"],["exp","Cury Construtora","dados de obras espalhados"],["project-motiva-field",null,"priorizar intervenções na rodovia"]]},
+ {t:"Dados",d:"Junto as fontes, limpo e deixo num formato em que dá para confiar e consultar.",ev:[["exp","Cury Construtora","centralização de evolução e planejamento"],["project-brazilian-energy-matrix",null,"dados públicos do ONS"],["project-territorio-vivo",null,"indicadores urbanos"]]},
+ {t:"Modelo",d:"Uso LLMs, visão computacional ou ML clássico só onde eles mudam o resultado.",ev:[["project-advisor-ai-pedagogico",null,"LangChain e Gemini"],["project-receitas-de-vo",null,"geração com Gemini"],["project-motiva-field",null,"visão computacional"],["project-brazilian-energy-matrix",null,"classificação e clusterização"]]},
+ {t:"Automação",d:"Conecto sistemas e deixo o processo rodando sozinho, com testes e CI.",ev:[["exp","G4 Educação","automações comerciais e assistentes de IA"],["project-motiva-field",null,"builds com GitHub Actions"],["project-territorio-vivo",null,"CI e testes"]]},
+ {t:"Produto",d:"Entrego uma interface que alguém de fora consegue usar no dia a dia.",ev:[["project-receitas-de-vo",null,"em produção"],["project-retrobook",null,"rede social completa"],["project-reinos-oniricos",null,"tempo real com Supabase"],["project-territorio-vivo",null,"funciona offline"]]}
+];
+const nodes=all(".node"),wires=all(".pipe .wire"),readout=$("#readout");
+nodes.forEach((n,i)=>{const c=STAGES[i].ev.length;n.querySelector(".c").textContent=c+(c===1?" caso":" casos")});
+function showStage(i){
+  nodes.forEach((n,j)=>n.setAttribute("aria-pressed",String(i===j)));
+  const s=STAGES[i];readout.querySelector("h3").textContent=s.t;readout.querySelector("p").textContent=s.d;
+  const ul=readout.querySelector(".evidence");ul.replaceChildren();
+  s.ev.forEach(([ref,label,why])=>{const li=document.createElement("li");let el;
+    if(ref==="exp"){el=document.createElement("a");el.href="#experiencia";el.textContent=label;el.addEventListener("click",e=>{e.preventDefault();goTo("experiencia")})}
+    else{const p=byId[ref];el=document.createElement("a");el.href="#"+ref;el.textContent=p?p.name:ref;el.addEventListener("click",e=>{e.preventDefault();goTo(ref)})}
+    const w=document.createElement("span");w.className="why";w.textContent=why;li.append(el,w);ul.append(li)});
 }
-function complete(){const q=norm(input.value);const matches=commands.filter(c=>norm(c).startsWith(q));if(matches.length===1){if(norm(input.value)===norm(matches[0]))return false;input.value=matches[0];return true}if(matches.length>1&&q){line(matches.join("\n"));return true}return false}
-function previous(){if(!history.length)return;if(position===history.length)draft=input.value;position=Math.max(0,position-1);input.value=history[position]}
+nodes.forEach((n,i)=>n.addEventListener("click",()=>showStage(i)));
+function lightAll(){nodes.forEach(n=>n.classList.add("lit"));wires.forEach(w=>w.classList.add("lit"))}
+showStage(0);
+if(reduce.matches||!("IntersectionObserver" in window)){lightAll()}else{
+  const io=new IntersectionObserver(es=>{if(!es.some(e=>e.isIntersecting))return;io.disconnect();
+    nodes.forEach((n,i)=>{setTimeout(()=>{n.classList.add("lit");if(wires[i])setTimeout(()=>wires[i].classList.add("lit"),160)},250+i*340)})},{threshold:.4});
+  io.observe($("#pipe"));
+}
+
+/* console */
+const input=$("#terminal-input"),log=$("#terminal-log"),skip=$("#skip-boot"),form=$("#terminal-form");
+const commands=["help","whoami","ls projects","experience","stack","pipeline","contact","clear",...entries.map(p=>"open "+p.slug)];
+let hist=[],pos=0,draft="",booted=false,bootTimer=null,step=0;
+function line(v,cls){const el=document.createElement("div");el.textContent=v;if(cls)el.className=cls;log.append(el);while(log.children.length>200)log.firstElementChild.remove();log.scrollTop=log.scrollHeight}
+const boot=[["[ok] carregando perfil","ok"],["[ok] "+entries.length+" projetos indexados","ok"],["[ok] 2 experiências","ok"],["Pronto. Digite help para ver os comandos.",""]];
+function finishBoot(){if(booted)return;booted=true;clearTimeout(bootTimer);skip.hidden=true;while(step<boot.length){const[b,c]=boot[step++];line(b,c)}}
+function bootNext(){if(booted)return;if(step>=boot.length){finishBoot();return}const[b,c]=boot[step++];line(b,c);bootTimer=setTimeout(bootNext,300)}
+if(reduce.matches)finishBoot();else{const io=new IntersectionObserver(es=>{if(es.some(e=>e.isIntersecting)){io.disconnect();bootNext()}},{threshold:.3});io.observe(log)}
+skip.addEventListener("click",finishBoot);
+function execute(raw){finishBoot();const cmd=raw.trim();if(!cmd)return;hist.push(cmd);if(hist.length>100)hist.shift();pos=hist.length;draft="";input.value="";line("~ $ "+cmd,"echo");const k=norm(cmd);
+ if(k==="clear"){log.replaceChildren();return}
+ if(k==="help"){line("whoami          quem sou\nls projects     lista de projetos\nopen <projeto>  vai até o projeto\nexperience      experiência profissional\nstack           tecnologias\npipeline        como eu trabalho\ncontact         como falar comigo\nclear           limpa o console\n\nTab completa, ↑ ↓ navegam no histórico.");return}
+ if(k==="whoami"){line("Guilherme Califoni\nEngenharia de IA aplicada\nEstratégia e Aquisição @ G4 Educação\nCiência da Computação @ FIAP\nSão Paulo, BR");return}
+ if(k==="ls projects"||k==="ls"){entries.forEach(p=>line(p.slug.padEnd(18)+p.status));line("\nuse: open <projeto>");return}
+ if(k==="experience"){line("abr 2026 – atual    G4 Educação, Estratégia / Aquisição\nago 2025 – abr 2026 Cury Construtora, TI");return}
+ if(k==="stack"){line(all(".skill").map(s=>s.querySelector("h3").textContent+"\n  "+all(".chips li").filter(li=>s.contains(li)).map(li=>li.textContent).join(", ")).join("\n\n"));return}
+ if(k==="pipeline"){line(STAGES.map((s,i)=>(i+1)+". "+s.t).join("  →  "));goTo("inicio");return}
+ if(k==="contact"){if(CONTACT.email)line("e-mail    "+CONTACT.email);if(CONTACT.linkedin)line("linkedin  "+CONTACT.linkedin);line("github    github.com/GuilhermeCalifoni-code");return}
+ if(k.startsWith("open ")){const q=k.slice(5).trim();const p=entries.find(p=>norm(p.slug)===q||norm(p.name)===q||norm(p.name).startsWith(q));if(!p){line("Projeto não encontrado. Use ls projects ou Tab.");return}line("abrindo "+p.name+"…","ok");goTo(p.id);return}
+ if(k.startsWith("sudo")){line("Permissão negada. Mas dá pra me contratar: digite contact.");return}
+ line("Comando não encontrado: "+cmd+". Digite help.");
+}
+function complete(){const q=norm(input.value);const m=commands.filter(c=>norm(c).startsWith(q));if(m.length===1){if(norm(input.value)===norm(m[0]))return false;input.value=m[0];return true}if(m.length>1&&q){line(m.join("   "));return true}return false}
 form.addEventListener("submit",e=>{e.preventDefault();execute(input.value)});
-input.addEventListener("keydown",e=>{if(e.key==="ArrowUp"){e.preventDefault();previous()}else if(e.key==="ArrowDown"){e.preventDefault();position=Math.min(history.length,position+1);input.value=position===history.length?draft:history[position]}else if(e.key==="Tab"&&!e.shiftKey&&input.value&&complete()){e.preventDefault()}});
-allOf("[data-command]").forEach(b=>b.addEventListener("click",()=>{execute(b.dataset.command);input.focus()}));
-$("#complete-command").addEventListener("click",()=>{complete();input.focus()});$("#prev-command").addEventListener("click",()=>{previous();input.focus()});
-const dialog=$("#command-palette"),search=$("#palette-search"),list=$("#palette-list"),trigger=$("#palette-trigger");let selected=0,filtered=[],returnFocus=null;
-const choices=[{name:"Início",id:"inicio",type:"Seção"},{name:"Experiência",id:"experiencia",type:"Seção"},{name:"Projetos",id:"projetos",type:"Seção"},{name:"Tecnologias",id:"stack",type:"Seção"},{name:"Contato",id:"contato",type:"Seção"},...entries.map(p=>({name:p.name,id:p.id,type:"Projeto",project:p,slug:p.slug}))];
-function select(i,scroll){selected=Math.max(0,Math.min(i,filtered.length-1));Array.from(list.children).forEach((el,j)=>el.setAttribute("aria-selected",String(j===selected)));if(filtered.length){search.setAttribute("aria-activedescendant","palette-option-"+selected);if(scroll)list.children[selected].scrollIntoView({block:"nearest"})}else search.removeAttribute("aria-activedescendant")}
-function render(){const q=norm(search.value);filtered=choices.filter(x=>norm(x.name+" "+(x.slug||"")+" "+x.type).includes(q));list.replaceChildren();filtered.forEach((x,i)=>{const el=document.createElement("div");el.className="palette-option";el.id="palette-option-"+i;el.setAttribute("role","option");const label=document.createElement("span");label.textContent=x.name;const category=document.createElement("small");category.textContent=x.type;el.append(label,category);el.addEventListener("click",()=>activate(x));list.append(el)});if(!filtered.length){const p=document.createElement("div");p.className="palette-foot";p.textContent="Nenhum resultado.";list.append(p)}select(0,false)}
+input.addEventListener("keydown",e=>{if(e.key==="ArrowUp"){if(!hist.length)return;e.preventDefault();if(pos===hist.length)draft=input.value;pos=Math.max(0,pos-1);input.value=hist[pos]}else if(e.key==="ArrowDown"){e.preventDefault();pos=Math.min(hist.length,pos+1);input.value=pos===hist.length?draft:hist[pos]}else if(e.key==="Tab"&&!e.shiftKey&&input.value&&complete())e.preventDefault()});
+all("[data-command]").forEach(b=>b.addEventListener("click",()=>{execute(b.dataset.command);input.focus({preventScroll:true})}));
+
+/* paleta Ctrl K */
+const dialog=$("#command-palette"),search=$("#palette-search"),list=$("#palette-list");let sel=0,filtered=[],returnFocus=null;
+const choices=[{name:"Início",id:"inicio",type:"seção"},{name:"Experiência",id:"experiencia",type:"seção"},{name:"Projetos",id:"projetos",type:"seção"},{name:"Stack",id:"stack",type:"seção"},{name:"Console",id:"console",type:"seção"},{name:"Contato",id:"contato",type:"seção"},...entries.map(p=>({name:p.name,id:p.id,type:"projeto",slug:p.slug}))];
+function select(i,scroll){sel=Math.max(0,Math.min(i,filtered.length-1));Array.from(list.children).forEach((el,j)=>el.setAttribute("aria-selected",String(j===sel)));if(filtered.length){search.setAttribute("aria-activedescendant","opt-"+sel);if(scroll)list.children[sel].scrollIntoView({block:"nearest"})}else search.removeAttribute("aria-activedescendant")}
+function render(){const q=norm(search.value);filtered=choices.filter(x=>norm(x.name+" "+(x.slug||"")+" "+x.type).includes(q));list.replaceChildren();filtered.forEach((x,i)=>{const el=document.createElement("div");el.className="palette-option";el.id="opt-"+i;el.setAttribute("role","option");const a=document.createElement("span");a.textContent=x.name;const b=document.createElement("small");b.textContent=x.type;el.append(a,b);el.addEventListener("click",()=>activate(x));list.append(el)});if(!filtered.length){const p=document.createElement("div");p.className="palette-foot";p.textContent="Nada encontrado. Tente o nome de um projeto.";list.append(p)}select(0,false)}
 function openPalette(){if(dialog.open)return;returnFocus=document.activeElement;dialog.showModal();search.value="";render();search.focus()}
-function activate(x){if(!x)return;dialog.close();if(x.project){goProject(x.project);return}const target=document.getElementById(x.id);if(target){target.tabIndex=-1;location.hash=x.id;target.focus({preventScroll:true});target.scrollIntoView({block:"start",behavior:reduce.matches?"instant":"smooth"})}}
-trigger.addEventListener("click",openPalette);$("#palette-close").addEventListener("click",()=>dialog.close());dialog.addEventListener("close",()=>{if(returnFocus&&document.activeElement===document.body)returnFocus.focus()});dialog.addEventListener("click",e=>{if(e.target===dialog)dialog.close()});search.addEventListener("input",render);search.addEventListener("keydown",e=>{if(e.key==="ArrowDown"||e.key==="ArrowUp"){e.preventDefault();if(filtered.length)select(selected+(e.key==="ArrowDown"?1:-1),true)}else if(e.key==="Enter"){e.preventDefault();activate(filtered[selected])}});
-document.addEventListener("keydown",e=>{if((e.ctrlKey||e.metaKey)&&e.key.toLowerCase()==="k"){e.preventDefault();if(dialog.open)dialog.close();else openPalette()}});
-if(matchMedia("(pointer:fine)").matches&&!reduce.matches){let frame=0;document.addEventListener("pointermove",e=>{if(reduce.matches||frame)return;const x=e.clientX,y=e.clientY;frame=requestAnimationFrame(()=>{document.documentElement.style.setProperty("--mx",x+"px");document.documentElement.style.setProperty("--my",y+"px");frame=0})},{passive:true})}
-const fmt=new Intl.DateTimeFormat("pt-BR",{timeZone:"America/Sao_Paulo",hour:"2-digit",minute:"2-digit",second:"2-digit",hourCycle:"h23"});function tick(){const now=new Date();$("#sp-clock").dateTime=now.toISOString();$("#sp-clock").textContent="SP "+fmt.format(now)}tick();setInterval(tick,1000);
-async function commit(){const el=$("#commit-status");let cached=null;try{cached=JSON.parse(localStorage.getItem("gc-last-public-commit")||"null")}catch{};function show(info,stale=false){if(!info||!/^GuilhermeCalifoni-code\/[A-Za-z0-9_.-]+$/.test(info.repo)||!(/^[a-f0-9]{7,40}$/i.test(info.sha)))return false;el.textContent="git: "+info.sha.slice(0,7)+" · "+info.repo.split("/").pop()+(stale?" (cache)":"");el.href="https://github.com/"+info.repo+"/commit/"+info.sha;el.title=(stale?"Último dado armazenado: ":"Último push público disponível: ")+info.date;return true}try{const response=await fetch("https://api.github.com/users/GuilhermeCalifoni-code/events/public?per_page=100",{headers:{Accept:"application/vnd.github+json"},signal:AbortSignal.timeout(6500)});if(!response.ok)throw Error("API");const events=await response.json();const push=events.find(e=>e.type==="PushEvent"&&e.repo?.name?.startsWith("GuilhermeCalifoni-code/")&&e.payload?.head);if(!push)throw Error("No public push");const sha=push.payload.head;if(!/^[a-f0-9]{7,40}$/i.test(sha))throw Error("Invalid SHA");const info={repo:push.repo.name,sha,date:push.created_at};if(!show(info))throw Error("Invalid public event");try{localStorage.setItem("gc-last-public-commit",JSON.stringify(info))}catch{}}catch{if(!show(cached,true)){el.textContent="git: commit público indisponível";el.title="A API pública pode estar limitada ou não retornar pushes recentes."}}}commit();
+function activate(x){if(!x)return;dialog.close();goTo(x.id)}
+$("#palette-trigger").addEventListener("click",openPalette);$("#palette-close").addEventListener("click",()=>dialog.close());
+dialog.addEventListener("close",()=>{if(returnFocus&&document.activeElement===document.body)returnFocus.focus()});
+dialog.addEventListener("click",e=>{if(e.target===dialog)dialog.close()});
+search.addEventListener("input",render);
+search.addEventListener("keydown",e=>{if(e.key==="ArrowDown"||e.key==="ArrowUp"){e.preventDefault();if(filtered.length)select(sel+(e.key==="ArrowDown"?1:-1),true)}else if(e.key==="Enter"){e.preventDefault();activate(filtered[sel])}});
+document.addEventListener("keydown",e=>{if((e.ctrlKey||e.metaKey)&&e.key.toLowerCase()==="k"){e.preventDefault();dialog.open?dialog.close():openPalette()}});
+
+/* relógio */
+const fmt=new Intl.DateTimeFormat("pt-BR",{timeZone:"America/Sao_Paulo",hour:"2-digit",minute:"2-digit",second:"2-digit",hourCycle:"h23"});
+const clock=$("#sp-clock");function tick(){const d=new Date();clock.dateTime=d.toISOString();clock.textContent="SP "+fmt.format(d)}tick();setInterval(tick,1000);
+
+/* último commit público */
+(async()=>{const el=$("#commit-status");let cached=null;try{cached=JSON.parse(localStorage.getItem("gc-last-public-commit")||"null")}catch{}
+ const ok=i=>i&&/^GuilhermeCalifoni-code\/[A-Za-z0-9_.-]+$/.test(i.repo)&&/^[a-f0-9]{7,40}$/i.test(i.sha);
+ function show(i,stale){if(!ok(i))return false;el.textContent="git "+i.sha.slice(0,7)+" em "+i.repo.split("/").pop()+(stale?" (cache)":"");el.href="https://github.com/"+i.repo+"/commit/"+i.sha;el.title="Último push público: "+i.date;return true}
+ try{const r=await fetch("https://api.github.com/users/GuilhermeCalifoni-code/events/public?per_page=100",{headers:{Accept:"application/vnd.github+json"},signal:AbortSignal.timeout(6500)});if(!r.ok)throw 0;
+  const ev=await r.json();const p=ev.find(e=>e.type==="PushEvent"&&e.repo?.name?.startsWith("GuilhermeCalifoni-code/")&&e.payload?.head);if(!p)throw 0;
+  const info={repo:p.repo.name,sha:p.payload.head,date:p.created_at};if(!show(info))throw 0;try{localStorage.setItem("gc-last-public-commit",JSON.stringify(info))}catch{}}
+ catch{if(!show(cached,true))el.textContent="git: ver repositórios"}})();
 })();
-</script></body></html>
+</script>
+</body>
+</html>
