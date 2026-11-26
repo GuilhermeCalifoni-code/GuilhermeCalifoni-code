@@ -13,6 +13,9 @@ São Paulo, Brazil
 [![PostgreSQL](https://img.shields.io/badge/PostgreSQL-4169E1?style=flat&logo=postgresql&logoColor=white)](https://www.postgresql.org/)
 [![n8n](https://img.shields.io/badge/n8n-EA4B71?style=flat&logo=n8n&logoColor=white)](https://n8n.io/)
 
+
+[**Portfolio**](https://guilherme-califoni-portfolio.vercel.app) · [**LinkedIn**](https://www.linkedin.com/in/guilhermecalifoni/) · [**Email**](mailto:gui2k70@gmail.com)
+
 </div>
 
 ## About me
